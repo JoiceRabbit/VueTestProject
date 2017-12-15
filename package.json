@@ -1,8 +1,8 @@
 {
-  "name": "teaching-vue",
+  "name": "vuedemo",
   "version": "1.0.0",
-  "description": "A Vue.js project",
-  "author": "our team",
+  "description": "test",
+  "author": "Joice <2540931391@qq.com>",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
@@ -37,7 +37,6 @@
     "eslint-plugin-node": "^5.2.0",
     "eslint-plugin-promise": "^3.4.0",
     "eslint-plugin-standard": "^3.0.1",
-    "eventsource-polyfill": "^0.9.6",
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^1.1.4",
     "friendly-errors-webpack-plugin": "^1.6.1",
