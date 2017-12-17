@@ -1,24 +1,24 @@
 <template>
 	<div>
 	  	<header class="header">
-	  		<div class="goback">返回</div>
-	  		<div class="search"></div>
-	  		<div class="city">城市</div>
+	  		<div class="goback iconfont">&#xe624;</div>
+	  		<div class="search mp-single-line">
+	  			<!-- <a href="#"> -->
+	  				<i class="iconfont">&#xe632;</i>
+	  				<span>输入城市/景点/游玩主题</span>
+	  			<!-- </a>	  		 -->
+	  		</div>
+	  		<div class="city">
+	  			<!-- <a href="#"> -->
+	  				<span>北京</span>
+	  				<i class="iconfont">&#xe60d;</i>
+	  			<!-- </a>  	 -->
+	  		</div>
 	  	</header>
 	  	<swiper :options="swiperOption">
 	    	<swiper-slide>
 	    	 <div class="swiper-img-com">
-	    			<img class="swiper-img" src="http://img1.qunarzz.com/piao/fusion/1711/cd/5ff8869f365e7e02.jpg_640x200_097b1798.jpg" />
-	    		</div>
-	    	</swiper-slide>
-	    	<swiper-slide>
-	    		<div class="swiper-img-com">
-	    			<img class="swiper-img" src="http://img1.qunarzz.com/piao/fusion/1712/d1/73dc10b5cd320202.jpg_640x200_02a40951.jpg" />
-	    		</div>
-	    	</swiper-slide>
-	    	<swiper-slide>
-	    		<div class="swiper-img-com">
-	    			<img class="swiper-img" src="http://img1.qunarzz.com/piao/fusion/1711/5a/cb4a0ccffeb99b02.jpg_640x200_1b0b75b1.jpg" />
+	    			<img class="swiper-img" src="" />
 	    		</div>
 	    	</swiper-slide>
 	    	<div class="swiper-pagination"  slot="pagination"></div>
@@ -43,16 +43,21 @@ export default {
 </script>
 
 <style scoped>
+	.mp-single-line {
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
 	.header {
 		display: flex;
 		background: #05bad5;
 		color: #fff;
-		text-align: center
 	}
 
 	.goback {
 		width: .64rem;
 		line-height: .86rem;
+		text-align: center;shape-margin: 
 	}
 
 	.search {
@@ -60,11 +65,14 @@ export default {
 		margin: .14rem .18rem;
 		background: #fff;
 		border-radius: .1rem;
+  	color: #e4e7ea;
+  	line-height: .58rem;
 	}
 
 	.city {
 		width: 1.14rem;
 		line-height: .86rem;
+		text-align: center;
 	}
 
 	.swiper-img-com {
