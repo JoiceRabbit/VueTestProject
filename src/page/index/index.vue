@@ -1,26 +1,26 @@
 <template>
 	<div>
-	  	<header class="header">
-	  		<div class="goback iconfont">&#xe624;</div>
-	  		<div class="search mp-single-line">
-	  				<i class="iconfont">&#xe632;</i>
-	  				<span>输入城市/景点/游玩主题</span>
-	  		</div>
-	  		<div class="city">
-	  				<span>北京</span>
-	  				<i class="iconfont">&#xe60d;</i>
-	  		</div>
-	  	</header>
-	  	<swiper :options="swiperOption">
-	    	<swiper-slide v-for="item in swiperInfo" :key="item.id">
-	    	 <div class="swiper-img-con">
-	    			<img class="swiper-img" :src="item.imgUrl" />
-	    		</div>
-	    	</swiper-slide>
-	    	<div class="swiper-pagination"  slot="pagination"></div>
-	  	</swiper>
-	  	
-	  	<swiper>
+  	<header class="header">
+  		<div class="goback iconfont">&#xe624;</div>
+  		<div class="search mp-single-line">
+  				<i class="iconfont">&#xe632;</i>
+  				<span>输入城市/景点/游玩主题</span>
+  		</div>
+  		<div class="city">
+  				<span>北京</span>
+  				<i class="iconfont">&#xe60d;</i>
+  		</div>
+  	</header>
+  	<swiper :options="swiperOption">
+    	<swiper-slide v-for="item in swiperInfo" :key="item.id">
+    	 <div class="swiper-img-con">
+    			<img class="swiper-img" :src="item.imgUrl" />
+    		</div>
+    	</swiper-slide>
+    	<div class="swiper-pagination"  slot="pagination"></div>
+  	</swiper>
+  	
+  	<swiper :options="swiperOption">
       <swiper-slide v-for="(pageInfo, index) in pages" :key="index">
         <div class="icon-wrapper">
           <div v-for="item in pageInfo" :key="item.id" class="icon-item">
@@ -28,11 +28,12 @@
             	<div class="icon-img-container">
              	 <img  class="icon-img" :src="item.imgUrl"/>
              	</div>
-             	<div>游乐场</div>
+             	<div class="iconTitle" v-html="item.title"></div>
             </div>
           </div>
         </div>
       </swiper-slide>
+      <div class="swiper-pagination"  slot="pagination"></div>
     </swiper>
 	</div>
 </template>
@@ -46,7 +47,6 @@ export default {
       iconInfo: [],
       swiperOption: {
         autoplay: 1000,
-        direction: 'horizontal',
         pagination: '.swiper-pagination',
         loop: true
       }
